@@ -24,7 +24,7 @@
 			"file": "doghouse/dog/models.py",
 			"settings":
 			{
-				"buffer_size": 1583,
+				"buffer_size": 1632,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -71,9 +71,7 @@
 	},
 	"expanded_folders":
 	[
-		"/home/juanky/Proyectos Django/doghouse/doghouse",
-		"/home/juanky/Proyectos Django/doghouse/doghouse/dog",
-		"/home/juanky/Proyectos Django/doghouse/doghouse/doghouse"
+		"/home/juanky/Proyectos Django/Proyecto/doghouse"
 	],
 	"file_history":
 	[
@@ -153,23 +151,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1583,
+						"buffer_size": 1632,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1583,
-								1583
+								1544,
+								1544
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

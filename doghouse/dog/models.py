@@ -4,18 +4,18 @@ from django.db import models
 
 # Create your models here.
 
-
-
 class Raza(models.Model):
 	Raza=models.CharField(max_length=150)
 	def __unicode__(self):
 		return self.Raza
 
 class Perro(models.Model):
+	adoptable='A'
+	adoptado='AD'
 	micropchip=models.CharField(max_length=30,unique=True)
 	nombre=models.CharField(max_length=100)
 	edad=models.IntegerField()
-	#foto=models.ImageField(upload_to=None,blank=True)
+	#foto=models.ImageField(upload_to='imagen/',blank=True)
 	caracter=models.CharField(max_length=50)
 	habitos=models.CharField(max_length=150)
 	peso=models.IntegerField()
@@ -26,6 +26,8 @@ class Perro(models.Model):
 	raza=models.ForeignKey(Raza)
 	cruze=models.BooleanField()
 	descripcion=models.CharField(max_length=150,blank=True)
+	estado_choices=(('A','adoptable'),('AD','adoptado'),)
+	estado=models.CharField(max_length=2,choices=estado_choices,default=adoptable,)
 	def __unicode__(self):
 		return self.nombre
 
@@ -48,8 +50,8 @@ class Usuario(models.Model):
 			return self.correo
 
 class Propiedade(models.Model):
-	perro=models.OneToOneField(Perro,related_name='microchip')
-	usuario=models.OneToOneField(Usuario,related_name='email')
+	perro=models.ForeignKey(Perro)
+	usuario=models.ForeignKey(Usuario)
 	
 	def __unicode__(self):
-			return str(self.usuario)
+			return str(self.usuario)+" "+" "+" "+str(self.perro)
