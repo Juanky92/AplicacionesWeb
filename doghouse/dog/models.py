@@ -50,7 +50,7 @@ class Usuario(models.Model):
 			return self.correo
 
 class Propiedade(models.Model):
-	perro=models.ForeignKey(Perro)
+	perro=models.ForeignKey(Perro,unique=True)
 	usuario=models.ForeignKey(Usuario)
 	
 	def __unicode__(self):
