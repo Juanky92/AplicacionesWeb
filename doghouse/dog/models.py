@@ -12,7 +12,10 @@ class Raza(models.Model):
 class Perro(models.Model):
 	adoptable='A'
 	adoptado='AD'
-	micropchip=models.CharField(max_length=30,unique=True)
+	enano="e"
+	mediano="m"
+	grande="g"
+	microchip=models.CharField(max_length=30,unique=True)
 	nombre=models.CharField(max_length=100)
 	edad=models.IntegerField()
 	#foto=models.ImageField(upload_to='imagen/',blank=True)
@@ -22,9 +25,10 @@ class Perro(models.Model):
 	vacunas=models.BooleanField()
 	color=models.CharField(max_length=100)
 	uso=models.CharField(max_length=100)
-	altura=models.CharField(max_length=50)
+	altura_choices=(('e','enano'),('m','mediano'),('g','grande'))
+	altura=models.CharField(max_length=3,choices=altura_choices,default=mediano,)
 	raza=models.ForeignKey(Raza)
-	cruze=models.BooleanField()
+	cruce=models.BooleanField()
 	descripcion=models.CharField(max_length=150,blank=True)
 	estado_choices=(('A','adoptable'),('AD','adoptado'),)
 	estado=models.CharField(max_length=2,choices=estado_choices,default=adoptable,)
@@ -39,10 +43,10 @@ class Usuario(models.Model):
 	dni=models.CharField(max_length=9)
 	sexo_choices=(('H','Hombre'),('M','Mujer'),)
 	sexo=models.CharField(max_length=2,choices=sexo_choices,default=hombre,)
-	telefono=models.IntegerField()
-	edad=models.IntegerField()
+	telefono=models.CharField(max_length=15)
+	edad=models.CharField(max_length=2)
 	domicilio=models.CharField(max_length=150)
-	cp=models.IntegerField()
+	cp=models.CharField(max_length=10)
 	localidad=models.CharField(max_length=75)
 	correo=models.EmailField()
 

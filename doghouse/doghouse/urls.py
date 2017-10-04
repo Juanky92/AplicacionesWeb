@@ -20,5 +20,7 @@ from dog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.inicio, name='inicio')
+    url(r'^$', views.inicio, name='inicio'),
+    url(r'^usuario/$', views.usuario, name='usuario'),
+    url(r'^perro/$', views.perro, name='perro')
 ]
