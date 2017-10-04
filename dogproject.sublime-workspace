@@ -24,7 +24,7 @@
 			"file": "doghouse/dog/models.py",
 			"settings":
 			{
-				"buffer_size": 1632,
+				"buffer_size": 1729,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -151,15 +151,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1632,
+						"buffer_size": 1729,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1544,
-								1544
+								957,
+								957
 							]
 						],
 						"settings":
