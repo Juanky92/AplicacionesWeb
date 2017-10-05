@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView
 #from .forms import UsuarioForm,PerroForm
 from .models import Usuario,Perro,Propiedade,Raza
 # Create your views here.
@@ -33,6 +33,15 @@ class propiedadesList(ListView):
 
     def __unicode__(self):
 		return self.str(usuario)
+
+class perroDetail(DetailView):
+	queryset=Perro.objects.all()
+class usuarioDetail(DetailView):
+	queryset=Usuario.objects.all()
+class razaDetail(DetailView):
+	queryset=Raza.objects.all()
+class propiedadeDetail(DetailView):
+	queryset=Propiedade.objects.all()
 
 #def usuario(request):
 	#form=UsuarioForm(request.POST or None)

@@ -1,9 +1,9 @@
 {% block content %}
     <h2>Propiedade</h2>
     <ul>
-        {% for Propiedade in object_list %}
-            <li>{{ Propiedade.usuario; }}</li>
-            <li>{{Propiedade.perro}}</li>
+        {% for propiedade in object_list %}
+        <a href="{{propiedade.id}}">
+            <li>{{ propiedade.usuario }}</li>
         {% endfor %}
     </ul>
 {% endblock %}

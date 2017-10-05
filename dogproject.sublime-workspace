@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ra",
+				"razaDetail"
+			],
+			[
+				"pro",
+				"propiedadeDetail"
+			],
+			[
 				"P",
 				"Perro"
 			]
@@ -15,28 +23,26 @@
 			"file": "doghouse/dog/views.py",
 			"settings":
 			{
-				"buffer_size": 1774,
+				"buffer_size": 2730,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "doghouse/doghouse/urls.py",
+			"file": "doghouse/dog/templates/dog/raza_list.html",
 			"settings":
 			{
-				"buffer_size": 998,
-				"encoding": "UTF-8",
+				"buffer_size": 199,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "doghouse/dog/templates/consulta.html",
+			"file": "doghouse/dog/templates/dog/propiedade_list.html",
 			"settings":
 			{
-				"buffer_size": 200,
+				"buffer_size": 225,
 				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "% extends \"base.html\" %}"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -77,11 +83,29 @@
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse"
 	],
 	"file_history":
 	[
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_detail.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_detail.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/usuario_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/urls.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/inicio.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/usuario_detail.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_detail.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/detallep_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/listadoraza.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/listadousuario.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/listadoperro.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/listadopropiedade.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/perroregistro.html",
+		"/home/juanky/Proyectos Django/pazyamoryelpluspalsalon/views.py",
+		"/home/juanky/Proyectos Django/pazyamoryelpluspalsalon/urls.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/settings.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/perro.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/usuario.html",
@@ -89,7 +113,6 @@
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog/style2.css",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog/style1.css",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/forms.py",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/urls.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/views.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/models.py",
 		"/media/juanky/EAE08D32E08D0653/ASIR_2016_2017/DJANGO/SE2/ESQUEMA/esque/views.py",
@@ -116,6 +139,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"perro",
 			"\n<",
 			"')\n"
 		],
@@ -125,6 +149,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"usuario",
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -144,15 +170,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1774,
+						"buffer_size": 2730,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								258,
-								258
+								1206,
+								1206
 							]
 						],
 						"settings":
@@ -164,59 +190,56 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "doghouse/doghouse/urls.py",
+					"file": "doghouse/dog/templates/dog/raza_list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 998,
+						"buffer_size": 199,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								991,
-								991
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "doghouse/dog/templates/consulta.html",
+					"file": "doghouse/dog/templates/dog/propiedade_list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 200,
+						"buffer_size": 225,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								135,
-								135
+								225,
+								225
 							]
 						],
 						"settings":
 						{
-							"auto_name": "% extends \"base.html\" %}",
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -268,7 +291,7 @@
 	"project": "dogproject.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -306,7 +329,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 217.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,8 +1,9 @@
 {% block content %}
     <h2>Razas</h2>
     <ul>
-        {% for Razas in object_list %}
-            <li>{{ Razas.raza }}</li>
+        {% for raza in object_list %}
+        <a href="{{raza.id}}">
+            <li>{{ raza.raza }}</li>
         {% endfor %}
     </ul>
 {% endblock %}

@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from dog import views
-from dog.views import perroList, usuarioList, razaList, propiedadesList
+from dog.views import perroList, usuarioList, razaList, propiedadesList,perroDetail,usuarioDetail,propiedadeDetail,razaDetail
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,6 +26,10 @@ urlpatterns = [
     url(r'^usuario_list/$',usuarioList.as_view(),name="Lista-de-usuarios"),
     url(r'^raza_list/$',razaList.as_view(),name="Lista-de-razas"),
     url(r'^propiedade_list/$',propiedadesList.as_view(),name="Lista-de-propiedad"),
+    url(r'^perro_list/(?P<pk>[0-9]+)/$',perroDetail.as_view(),name="Detalle-de-perro"),
+    url(r'^usuario_list/(?P<pk>[0-9]+)/$',usuarioDetail.as_view(),name="Detalle-de-usuario"),
+    url(r'^raza_list/(?P<pk>[0-9]+)/$',razaDetail.as_view(),name="Detalle-de-raza"),
+    url(r'^propiedade_list/(?P<pk>[0-9]+)/$',propiedadeDetail.as_view(),name="Detalle-de-propiedades"),
     #url(r'^usuario/$', views.usuario, name='usuario'),
 
 
