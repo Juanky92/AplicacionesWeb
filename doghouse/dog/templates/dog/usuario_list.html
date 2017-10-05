@@ -1,0 +1,8 @@
+{% block content %}
+    <h2>Usuarios</h2>
+    <ul>
+        {% for Usuarios in object_list %}
+            <li>{{ Usuarios.nombre }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

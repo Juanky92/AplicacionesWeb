@@ -1,0 +1,9 @@
+{% block content %}
+    <h2>Propiedade</h2>
+    <ul>
+        {% for Propiedade in object_list %}
+            <li>{{ Propiedade.usuario; }}</li>
+            <li>{{Propiedade.perro}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

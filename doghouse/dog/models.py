@@ -5,9 +5,9 @@ from django.db import models
 # Create your models here.
 
 class Raza(models.Model):
-	Raza=models.CharField(max_length=150)
+	raza=models.CharField(max_length=150)
 	def __unicode__(self):
-		return self.Raza
+		return self.raza
 
 class Perro(models.Model):
 	adoptable='A'
