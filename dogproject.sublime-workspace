@@ -19,14 +19,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "doghouse/dog/models.py",
-			"settings":
-			{
-				"buffer_size": 2279,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -63,13 +55,13 @@
 		"/home/juanky/Proyectos Django/Proyecto/doghouse",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog/imagen",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse"
 	],
 	"file_history":
 	[
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/models.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_list.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/urls.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_list.html",
@@ -91,7 +83,6 @@
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/usuario_form.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_form.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/settings.py",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/models.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/forms.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_detail.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_detail.html",
@@ -158,38 +149,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "doghouse/dog/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2279,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1340,
-								1340
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
