@@ -1,10 +1,62 @@
 from django.shortcuts import render
 from django.views.generic import ListView,DetailView
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
 #from .forms import UsuarioForm,PerroForm
+from django.urls import reverse_lazy
 from .models import Usuario,Perro,Propiedade,Raza
 # Create your views here.
 def inicio(request):
 	return render(request,"inicio.html",{})
+
+class perroCreate(CreateView):
+	model=Perro
+	fields=['microchip','nombre','edad','caracter','habitos','peso','vacunas','color','uso','altura','raza','cruce','descripcion','estado']
+
+class usuarioCreate(CreateView):
+	model=Usuario
+	fields =['nombre','apellidos','dni','sexo','telefono','edad','domicilio','cp','localidad','correo']
+
+class razaCreate(CreateView):
+	model=Raza
+	fields =['raza']
+
+class propiedadeCreate(CreateView):
+	model=Propiedade
+	fields =['perro','usuario']
+
+
+class perroUpdate(UpdateView):
+	model=Perro
+	fields=['microchip','nombre','edad','caracter','habitos','peso','vacunas','color','uso','altura','raza','cruce','descripcion','estado']
+
+class usuarioUpdate(UpdateView):
+	model=Usuario
+	fields =['nombre','apellidos','dni','sexo','telefono','edad','domicilio','cp','localidad','correo']
+
+class razaUpdate(UpdateView):
+	model=Raza
+	fields =['raza']
+
+class propiedadeUpdate(UpdateView):
+	model=Propiedade
+	fields =['perro','usuario']
+
+class perroDelete(DeleteView):
+	model=Perro
+	success_url = reverse_lazy('perro_list')
+
+class usuarioDelete(DeleteView):
+	model=Usuario
+	success_url = reverse_lazy('usuario_list')
+
+class razaDelete(DeleteView):
+	model=Raza
+	success_url = reverse_lazy('raza_list')
+
+class propiedadeDelete(DeleteView):
+	model=Propiedade
+	success_url = reverse_lazy('propiedade_list')
+
 
 class perroList(ListView):
     model = Perro

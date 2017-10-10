@@ -1,9 +1,13 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'dog/style3.css' %}" />
 {% block content %}
     <h2>Usuarios</h2>
     <ul>
         {% for usuario in object_list %}
-        <a href="{{usuario.id}}">
-            <li>{{ usuario.nombre }}</li>
+        <li>{{ usuario.nombre }}</li>
+        <a href="{{usuario.id}}">Detalle</a>
+        <a href="usuario_confirm_delete/{{usuario.id}}/delete">Eliminar</a>
+
         {% endfor %}
     </ul>
 {% endblock %}

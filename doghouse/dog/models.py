@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-
+from django.urls import reverse
 from django.db import models
 
 # Create your models here.
@@ -8,6 +8,8 @@ class Raza(models.Model):
 	raza=models.CharField(max_length=150)
 	def __unicode__(self):
 		return self.raza
+	def get_absolute_url(self):
+		return reverse('raza_detail',kwargs={'pk':self.pk})
 
 class Perro(models.Model):
 	adoptable='A'
@@ -34,6 +36,8 @@ class Perro(models.Model):
 	estado=models.CharField(max_length=2,choices=estado_choices,default=adoptable,)
 	def __unicode__(self):
 		return self.nombre
+	def get_absolute_url(self):
+		return reverse('perro_detail',kwargs={'pk':self.pk})
 
 class Usuario(models.Model):
 	hombre='H'
@@ -51,7 +55,10 @@ class Usuario(models.Model):
 	correo=models.EmailField()
 
 	def __unicode__(self):
-			return self.correo
+		return self.correo
+
+	def get_absolute_url(self):
+		return reverse('usuario_detail',kwargs={'pk':self.pk})
 
 class Propiedade(models.Model):
 	perro=models.ForeignKey(Perro,unique=True)
@@ -59,3 +66,5 @@ class Propiedade(models.Model):
 	
 	def __unicode__(self):
 			return str(self.usuario)+" "+" "+" "+str(self.perro)
+	def get_absolute_url(self):
+		return reverse('propiedade_detail',kwargs={'pk':self.pk})

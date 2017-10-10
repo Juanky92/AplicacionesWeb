@@ -2,8 +2,9 @@
     <h2>Razas</h2>
     <ul>
         {% for raza in object_list %}
-        <a href="{{raza.id}}">
-            <li>{{ raza.raza }}</li>
+        <li>{{ raza.raza }}</li>
+        <a href="{{raza.id}}">Detalle</a>
+        <a href="raza_confirm_delete/{{raza.id}}/delete">Eliminar</a>
         {% endfor %}
     </ul>
 {% endblock %}
