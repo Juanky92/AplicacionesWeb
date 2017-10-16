@@ -20,10 +20,10 @@
 	"buffers":
 	[
 		{
-			"file": "doghouse/doghouse/urls.py",
+			"file": "doghouse/dog/templates/dog/usuario_list.html",
 			"settings":
 			{
-				"buffer_size": 916,
+				"buffer_size": 400,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -32,7 +32,8 @@
 			"file": "doghouse/dog/views.py",
 			"settings":
 			{
-				"buffer_size": 4160,
+				"buffer_size": 4562,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -41,7 +42,6 @@
 			"settings":
 			{
 				"buffer_size": 2249,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -87,9 +87,10 @@
 	],
 	"file_history":
 	[
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/urls.py",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/urls.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/models.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_list.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/urls.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_list.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/inicio.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/views.py",
@@ -175,54 +176,52 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "doghouse/doghouse/urls.py",
+					"file": "doghouse/dog/templates/dog/usuario_list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 916,
+						"buffer_size": 400,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								910,
-								910
+								339,
+								339
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "doghouse/dog/views.py",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4160,
+						"buffer_size": 4562,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2098,
+								2098
 							]
 						],
 						"settings":
@@ -230,11 +229,11 @@
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -250,8 +249,8 @@
 						"selection":
 						[
 							[
-								411,
-								411
+								739,
+								739
 							]
 						],
 						"settings":
@@ -264,7 +263,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
