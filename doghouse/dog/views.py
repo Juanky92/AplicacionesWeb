@@ -13,11 +13,6 @@ class perroCreate(CreateView):
 	fields=['microchip','nombre','edad','caracter','habitos','peso','vacunas','color','uso','altura','raza','cruce','descripcion','estado']
 	success_url = reverse_lazy("Lista-de-perros")
 
-class usuarioCreate(CreateView):
-	model=Usuario
-	fields =['nombre','apellidos','dni','sexo','telefono','edad','domicilio','cp','localidad','correo']
-	success_url = reverse_lazy("Lista-de-usuarios")
-
 class razaCreate(CreateView):
 	model=Raza
 	fields =['raza']
@@ -34,10 +29,6 @@ class perroUpdate(UpdateView):
 	fields=['microchip','nombre','edad','caracter','habitos','peso','vacunas','color','uso','altura','raza','cruce','descripcion','estado']
 	success_url = reverse_lazy("Lista-de-perros")
 
-class usuarioUpdate(UpdateView):
-	model=Usuario
-	fields =['nombre','apellidos','dni','sexo','telefono','edad','domicilio','cp','localidad','correo']
-	success_url = reverse_lazy("Lista-de-usuarios")
 
 class razaUpdate(UpdateView):
 	model=Raza
@@ -53,9 +44,6 @@ class perroDelete(DeleteView):
 	model=Perro
 	success_url = reverse_lazy("Lista-de-perros")
 
-class usuarioDelete(DeleteView):
-	model=Usuario
-	success_url = reverse_lazy("Lista-de-usuarios")
 
 class razaDelete(DeleteView):
 	model=Raza
@@ -73,12 +61,6 @@ class perroList(ListView):
     def __unicode__(self):
 		return self.nombre
 
-class usuarioList(ListView):
-    model = Usuario
-    fields =['nombre','apellidos','dni','sexo','telefono','edad','domicilio','cp','localidad','correo']
-
-    def __unicode__(self):
-		return self.nombre
 
 class razaList(ListView):
     model = Raza
@@ -96,8 +78,6 @@ class propiedadesList(ListView):
 
 class perroDetail(DetailView):
 	queryset=Perro.objects.all()
-class usuarioDetail(DetailView):
-	queryset=Usuario.objects.all()
 class razaDetail(DetailView):
 	queryset=Raza.objects.all()
 class propiedadeDetail(DetailView):
