@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'perro_list/perro_confirm_delete/(?P<pk>[0-9]+)/delete/$', perroDelete.as_view(), name='perro_delete'),
     url(r'raza_list/raza_confirm_delete/(?P<pk>[0-9]+)/delete/$', razaDelete.as_view(), name='raza_delete'),
     url(r'propiedade_list/propiedade_confirm_delete/(?P<pk>[0-9]+)/delete/$', propiedadeDelete.as_view(), name='propiedade_delete'),
+    url(r'^login/$', views.loginView, name="Login"),
+    url(r'^logout/$', views.logoutView, name="Logout"),
 ]

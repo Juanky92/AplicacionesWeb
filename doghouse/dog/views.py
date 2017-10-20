@@ -1,12 +1,16 @@
-from django.shortcuts import render
+from __future__ import unicode_literals
+from django.shortcuts import render,redirect
 from django.views.generic import ListView,DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
-#from .forms import UsuarioForm,PerroForm
 from django.urls import reverse_lazy
-from .models import Usuario,Perro,Propiedade,Raza
-# Create your views here.
+from .models import *
+from django.contrib.auth import authenticate, login, logout
+
 def inicio(request):
-	return render(request,"inicio.html",{})
+	if request.user.is_authenticated:
+		return render(request, "inicio.html", {})
+	else:
+		return redirect("Login")
 
 class perroCreate(CreateView):
 	model=Perro
@@ -83,3 +87,17 @@ class razaDetail(DetailView):
 class propiedadeDetail(DetailView):
 	queryset=Propiedade.objects.all()
 
+def loginView(request):
+	if request.method == "POST":
+		usuario = request.POST['username']
+		password = request.POST['password']
+		user = authenticate(username=usuario, password=password)
+		if user is not None:
+			login(request, user)
+			return redirect("inicio")
+	else:
+		return render(request,"login.html")
+
+def logoutView(request):
+	logout(request)
+	return redirect("Login")

@@ -43,8 +43,6 @@ class Perro(models.Model):
 class Usuario(models.Model):
 	hombre='H'
 	mujer='M'
-	#nombre=models.CharField(max_length=50)
-	#apellidos=models.CharField(max_length=150)
 	dni=models.CharField(max_length=9)
 	sexo_choices=(('H','Hombre'),('M','Mujer'),)
 	sexo=models.CharField(max_length=2,choices=sexo_choices,default=hombre,)
@@ -53,11 +51,10 @@ class Usuario(models.Model):
 	domicilio=models.CharField(max_length=150)
 	cp=models.CharField(max_length=10)
 	localidad=models.CharField(max_length=75)
-	#correo=models.EmailField()
 	usuario=models.OneToOneField(User,on_delete=models.CASCADE,unique=True)
 
 	def __unicode__(self):
-		return self.dni
+		return str(self.usuario)
 
 	def get_absolute_url(self):
 		return reverse('usuario_detail',kwargs={'pk':self.pk})

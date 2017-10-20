@@ -6,6 +6,8 @@
 </head>
 <body>
 
+
+
 <a href="perro_list">Consulta de perros</a>
 <br>
 <a href="propiedade_list">Consulta de propiedad</a>
@@ -17,6 +19,13 @@
 <a href="raza_form/add">Registro de razas</a>
 <br>
 <a href="propiedade_form/add">Registro de propiedades</a>
+<br>
+<br>
+<br>
+<br>
+<form action="logout/" method="POST" name="auth">
+  {% csrf_token %}
+  <button type="submit">Logout</button>
+</form>
 </body>
 </html>
-
