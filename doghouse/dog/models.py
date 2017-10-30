@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 from django.urls import reverse
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # Create your models here.
 
@@ -11,6 +13,37 @@ class Raza(models.Model):
 		return self.raza
 	def get_absolute_url(self):
 		return reverse('raza_detail',kwargs={'pk':self.pk})
+
+
+class Usuario(models.Model):
+	hombre='H'
+	mujer='M'
+	dni=models.CharField(max_length=9)
+	sexo_choices=(('H','Hombre'),('M','Mujer'),)
+	sexo=models.CharField(max_length=2,choices=sexo_choices,default=hombre,)
+	telefono=models.CharField(max_length=15)
+	edad=models.CharField(max_length=2)
+	domicilio=models.CharField(max_length=150)
+	cp=models.CharField(max_length=10)
+	localidad=models.CharField(max_length=75)
+	usuario=models.OneToOneField(User,on_delete=models.CASCADE,unique=True)
+
+	@receiver(post_save, sender=User)
+	def create_user_usuario(sender, instance, created, **kwargs):
+		if created:
+			Usuario.objects.create(usuario=instance)
+
+	@receiver(post_save, sender=User)
+	def save_user_usuario(sender, instance, **kwargs):
+		instance.usuario.save()
+
+
+	def __unicode__(self):
+		return str(self.usuario)
+
+	def get_absolute_url(self):
+		return reverse('usuario_detail',kwargs={'pk':self.pk})
+
 
 class Perro(models.Model):
 	adoptable='A'
@@ -35,35 +68,10 @@ class Perro(models.Model):
 	descripcion=models.CharField(max_length=150,blank=True)
 	estado_choices=(('A','adoptable'),('AD','adoptado'),)
 	estado=models.CharField(max_length=2,choices=estado_choices,default=adoptable,)
+	propietario=models.ForeignKey(User)
+
 	def __unicode__(self):
 		return self.nombre
 	def get_absolute_url(self):
 		return reverse('perro_detail',kwargs={'pk':self.pk})
 
-class Usuario(models.Model):
-	hombre='H'
-	mujer='M'
-	dni=models.CharField(max_length=9)
-	sexo_choices=(('H','Hombre'),('M','Mujer'),)
-	sexo=models.CharField(max_length=2,choices=sexo_choices,default=hombre,)
-	telefono=models.CharField(max_length=15)
-	edad=models.CharField(max_length=2)
-	domicilio=models.CharField(max_length=150)
-	cp=models.CharField(max_length=10)
-	localidad=models.CharField(max_length=75)
-	usuario=models.OneToOneField(User,on_delete=models.CASCADE,unique=True)
-
-	def __unicode__(self):
-		return str(self.usuario)
-
-	def get_absolute_url(self):
-		return reverse('usuario_detail',kwargs={'pk':self.pk})
-
-class Propiedade(models.Model):
-	perro=models.ForeignKey(Perro,unique=True)
-	usuario=models.ForeignKey(Usuario)
-	
-	def __unicode__(self):
-			return str(self.usuario)+" "+" "+" "+str(self.perro)
-	def get_absolute_url(self):
-		return reverse('propiedade_detail',kwargs={'pk':self.pk})

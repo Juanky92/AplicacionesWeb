@@ -1,12 +1,16 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'dog/style2.css' %}" />
 {% block content %}
+
     <h2>Perros</h2>
     <ul>
         {% for perro in object_list %}
         <li>{{ perro.nombre }}</li>
         <a href="{{perro.id}}">Detalle</a>
+        {% if perms.dog.delete_perro %}
         <a href="perro_confirm_delete/{{perro.id}}/delete">Eliminar</a>
+        {% endif %}
         {% endfor %}
     </ul>
+
 {% endblock %}

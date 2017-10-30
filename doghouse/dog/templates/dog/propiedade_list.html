@@ -4,7 +4,9 @@
         {% for propiedade in object_list %}
         <li>{{ propiedade.usuario }}</li>
         <a href="{{propiedade.id}}">Detalle</a>
+        {% if perms.dog.delete_propiedade %}
         <a href="propiedade_confirm_delete/{{propiedade.id}}/delete">Eliminar</a>
+        {% endif %}
         {% endfor %}
     </ul>
 {% endblock %}
