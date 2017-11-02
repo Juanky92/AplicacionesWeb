@@ -7,8 +7,8 @@
         {% for perro in object_list %}
         <li>{{ perro.nombre }}</li>
         <a href="{{perro.id}}">Detalle</a>
-        {% if perms.dog.delete_perro %}
-        <a href="perro_confirm_delete/{{perro.id}}/delete">Eliminar</a>
+        {% if perro.propietario.id == user.id %}
+            <a href="perro_confirm_delete/{{perro.id}}/delete">Eliminar</a>
         {% endif %}
         {% endfor %}
     </ul>

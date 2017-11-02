@@ -27,36 +27,17 @@ class perroCreate(CreateView):
 		form.instance.propietario=User.objects.get(username=self.request.user.username)
 		return super(perroCreate,self).form_valid(form)
 
-
-@method_decorator(login_required,name = 'dispatch' )
-class razaCreate(CreateView):
-	model=Raza
-	fields =['raza']
-	success_url = reverse_lazy("Lista-de-razas")
-
 @method_decorator(login_required,name = 'dispatch' )
 class perroUpdate(UpdateView):
 	model=Perro
 	fields=['microchip','nombre','edad','caracter','habitos','peso','vacunas','color','uso','altura','raza','cruce','descripcion','estado']
 	success_url = reverse_lazy("Lista-de-perros")
 
-@method_decorator(login_required,name = 'dispatch' )
-class razaUpdate(UpdateView):
-	model=Raza
-	fields =['raza']
-	success_url = reverse_lazy("Lista-de-razas")
-
 
 @method_decorator(login_required,name = 'dispatch' )
 class perroDelete(DeleteView):
 	model=Perro
 	success_url = reverse_lazy("Lista-de-perros")
-
-@method_decorator(login_required,name = 'dispatch' )
-class razaDelete(DeleteView):
-	model=Raza
-	success_url = reverse_lazy("Lista-de-razas")
-
 
 class perroList(ListView):
     model = Perro
@@ -103,7 +84,7 @@ def UsuarioNuevo(request):
 		user_form = UserForm(request.POST)
 		usuario_form = UsuarioForm(request.POST)
 	 	if user_form.is_valid() and usuario_form.is_valid():
-	 		new_user = User.objects.create_user(username=user_form.cleaned_data['username'], password=user_form.cleaned_data['password'])
+	 		new_user = User.objects.create_user(username=user_form.cleaned_data['username'], password=user_form.cleaned_data['password'],email=user_form.cleaned_data['email'],first_name=user_form.cleaned_data['first_name'],last_name=user_form.cleaned_data['last_name'])
 	 		new_user.usuario.dni = usuario_form.cleaned_data['dni']
 			new_user.usuario.sexo=usuario_form.cleaned_data['sexo']
 			new_user.usuario.telefono=usuario_form.cleaned_data['telefono']

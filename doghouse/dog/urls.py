@@ -12,11 +12,8 @@ urlpatterns = [
     url(r'^perro_list/(?P<pk>[0-9]+)/$',perroDetail.as_view(),name="Detalle-de-perro"),
     url(r'^raza_list/(?P<pk>[0-9]+)/$',razaDetail.as_view(),name="Detalle-de-raza"),
     url(r'perro_form/add/$', perroCreate.as_view(), name='perro_add'),
-    url(r'raza_form/add/$', razaCreate.as_view(), name='raza_add'),
     url(r'perro_form/(?P<pk>[0-9]+)/$', perroUpdate.as_view(), name='perro_update'),
-    url(r'raza_form/(?P<pk>[0-9]+)/$', razaUpdate.as_view(), name='raza_update'),
     url(r'perro_list/perro_confirm_delete/(?P<pk>[0-9]+)/delete/$', perroDelete.as_view(), name='perro_delete'),
-    url(r'raza_list/raza_confirm_delete/(?P<pk>[0-9]+)/delete/$', razaDelete.as_view(), name='raza_delete'),
     url(r'^login/$', views.loginView, name="Login"),
     url(r'^logout/$', views.logoutView, name="Logout"),
 ]

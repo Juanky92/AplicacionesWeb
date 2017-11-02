@@ -4,9 +4,6 @@
         {% for raza in object_list %}
         <li>{{ raza.raza }}</li>
         <a href="{{raza.id}}">Detalle</a>
-        {% if perms.dog.delete_raza %}
-        <a href="raza_confirm_delete/{{raza.id}}/delete">Eliminar</a>
-        {% endif %}
         {% endfor %}
     </ul>
 {% endblock %}
