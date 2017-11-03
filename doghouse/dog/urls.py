@@ -5,6 +5,7 @@ from dog.views import *
 from . import views
     
 urlpatterns = [
+    url(r'^base$', views.base, name='base'),
     url(r'^inicio$', views.inicio, name='inicio'),
     url(r'^nuevo/$', UsuarioNuevo, name='Usuario'),
     url(r'^perro_list/$',perroList.as_view(),name="Lista-de-perros"),
