@@ -17,9 +17,6 @@ def inicio(request):
 	else:
 		return redirect("Login")
 
-def base(request):
-	return render(request,"base.html",{})
-
 @method_decorator(login_required,name = 'dispatch' )
 class perroCreate(CreateView):
 	model=Perro

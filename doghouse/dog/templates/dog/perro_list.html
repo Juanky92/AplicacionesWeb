@@ -1,16 +1,17 @@
-{%extends 'base.html'%}
+{%extends 'inicio.html'%}
 {% load staticfiles %}
 {%block content%}
 <link rel="stylesheet" type="text/css" href="{% static 'dog/style2.css' %}" />
-    <h2>Perros</h2>
     <ul>
         {% for perro in object_list %}
-        <li>{{ perro.nombre }}</li>
-        <a href="{{perro.id}}">Detalle</a>
+        <li>
+        <a href="{{perro.id}}">{{ perro.nombre }}</a>&nbsp;&nbsp;&nbsp;&nbsp;
         {% if perro.propietario.id == user.id %}
-            <a href="perro_confirm_delete/{{perro.id}}/delete">Eliminar</a>
+            <a href="perro_confirm_delete/{{perro.id}}/delete" style="color:black";>Eliminar</a>
         {% endif %}
+        </li>
         {% endfor %}
     </ul>
 
 {% endblock %}
+
