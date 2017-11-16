@@ -69,16 +69,16 @@
 			"file": "doghouse/dog/templates/inicio.html",
 			"settings":
 			{
-				"buffer_size": 2895,
+				"buffer_size": 3097,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "doghouse/dog/templates/dog/perro_form.html",
+			"file": "doghouse/dog/templates/login.html",
 			"settings":
 			{
-				"buffer_size": 177,
+				"buffer_size": 652,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -133,6 +133,7 @@
 	],
 	"file_history":
 	[
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_form.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/models.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_list.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_list.html",
@@ -169,7 +170,6 @@
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_confirm_delete.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/usuario_confirm_delete.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_confirm_delete.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_form.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_form.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_form.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/settings.py",
@@ -267,7 +267,7 @@
 						"translation.y": 561.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -304,15 +304,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2895,
+						"buffer_size": 3097,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1480,
-								1480
+								2089,
+								2089
 							]
 						],
 						"settings":
@@ -328,19 +328,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "doghouse/dog/templates/dog/perro_form.html",
+					"file": "doghouse/dog/templates/login.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 177,
+						"buffer_size": 652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								167,
-								167
+								391,
+								391
 							]
 						],
 						"settings":
@@ -351,7 +351,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{

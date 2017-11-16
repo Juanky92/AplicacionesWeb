@@ -3,10 +3,10 @@
 <form action="../login/" method="POST" name="auth">
   {% csrf_token %}
   <label>Nombre</label>
-  <input type="text" name="username">
+  <input type="text" name="username" style='height:2%'>
   <label>Password</label>
-  <input type="password" name="password">
-  <button type="submit">Login</button>
+  <input type="password" name="password" style='height:2%'>
+  <input class="btn btn-default" align='center' type="submit" value="Login" style='height:3%' text-aling='top'>
 </form>
 {% endblock %}
 {%block content %}

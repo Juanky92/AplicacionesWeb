@@ -54,7 +54,7 @@ class Perro(models.Model):
 	microchip=models.CharField(max_length=30,unique=True)
 	nombre=models.CharField(max_length=100)
 	edad=models.IntegerField()
-	#foto=models.ImageField(upload_to='imagen/',blank=True)
+	# foto=models.ImageField(upload_to='static/dog/imagen/',blank=True)
 	caracter=models.CharField(max_length=50)
 	habitos=models.CharField(max_length=150)
 	peso=models.IntegerField()
