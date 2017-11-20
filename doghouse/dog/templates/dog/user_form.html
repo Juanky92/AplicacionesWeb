@@ -1,12 +1,14 @@
 {%extends 'inicio.html'%}
+{% load staticfiles %}
 {%block content%}
+<link rel="stylesheet" type="text/css" href="{% static 'dog/style3.css' %}" />
 <style>
 .helptext{visibility: hidden;}
 </style>
 <form method="post">
 	{% csrf_token %}
-	{{ user_form.as_p }}
-	{{ usuario_form.as_p }}
+	<b>{{ user_form.as_p }}
+	{{ usuario_form.as_p }}</b>
 	<input type="submit" value="Registrar" />
 </form>
 {%endblock%}

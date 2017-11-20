@@ -1,5 +1,7 @@
 {%extends 'inicio.html'%}
+{% load staticfiles %}
 {%block content%}
+<link rel="stylesheet" type="text/css" href="{% static 'dog/style4.css' %}" />
 <form action="" method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Registrar" />

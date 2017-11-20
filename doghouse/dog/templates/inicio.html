@@ -49,7 +49,7 @@
            		<a class="nav-link">
               		<form action="logout/" method="POST" name="auth">
   					{% csrf_token %}
-  					<input class="btn btn-default" align='center' type="submit" value="Logout" style='height:3%' text-aling='top'>
+            <input type=button class="btn btn-default" value="Logout"  style='height:3%' onClick="location.href='{% url 'Logout' %}'">
 					</form>
             	</a>
            </li>

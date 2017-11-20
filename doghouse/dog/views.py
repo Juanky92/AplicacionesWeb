@@ -10,6 +10,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from forms import UsuarioForm, UserForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
 def inicio(request):
 	if request.user.is_authenticated:
@@ -56,7 +57,7 @@ class razaList(ListView):
 class perroDetail(DetailView):
 	queryset=Perro.objects.all()
 
-@method_decorator(login_required,name = 'dispatch' )
+
 class razaDetail(DetailView):
 	queryset=Raza.objects.all()
 
@@ -70,7 +71,10 @@ def loginView(request):
 			login(request, user)
 			return redirect("inicio")
 		else:
-			return redirect("Login")
+					storage = messages.get_messages(request)
+					storage.used=True
+					messages.add_message(request, messages.INFO, "No estas logueado")
+		return redirect("Login")
 	else:
 		return render(request,"login.html")
 
