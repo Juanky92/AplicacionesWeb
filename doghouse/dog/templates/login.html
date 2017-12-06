@@ -8,11 +8,33 @@
   <input type="password" name="password" style='height:2%'>
   <input class="btn btn-default" align='center' type="submit" value="Login" style='height:3%' text-aling='top'>
 </form>
+{% if messages %}
+	{% for message in messages %}
+		<script>alert('{{message}}');</script>
+	{% endfor %}
+{% endif %}
 {% endblock %}
 {%block content %}
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'dog/style1.css' %}" />
+<html>
+<head>
+<h1>Bienvenidos a Doghouse</h1>
+</head>
 <body>
-</body>
+<div id="content">
+<div class="left-col">
+<div id="welcome">
+<p align="justify" style="max-width:40%"><font face="Courier" color="grey">Doghouse es un portal web para aquellas personas que quieren darle una nueva oportunidad a estas adorables seres que nos acompañan dia a dia y que solo saben demostrarnos el cariño que procesan por quienes lo tratan bien, por ello se ha creado este sitio con el fin de poder hacer mas dificil encontrar un perro en las perreras o calles, pues aunque ellos no hablen sienten lo mismo que nosotros, por lo que desde aqui, se agradece la importancia de este gesto</font></p>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
 {% endblock %}

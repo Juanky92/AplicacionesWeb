@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 # Register your models here.
 
-from .models import (Usuario,Perro,Raza)
+from .models import (Usuario,Perro,Raza,Articulo)
 
 class UsuarioInline(admin.StackedInline):
   	model= Usuario
@@ -25,3 +25,4 @@ admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(Perro)
 admin.site.register(Raza)
+admin.site.register(Articulo)

@@ -4,8 +4,10 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.conf import settings
+import os
+# # Create your models here.
 
-# Create your models here.
 
 class Raza(models.Model):
 	raza=models.CharField(max_length=150)
@@ -54,7 +56,7 @@ class Perro(models.Model):
 	microchip=models.CharField(max_length=30,unique=True)
 	nombre=models.CharField(max_length=100)
 	edad=models.IntegerField()
-	# foto=models.ImageField(upload_to='static/dog/imagen/',blank=True)
+	foto=models.ImageField(upload_to="../imagen")
 	caracter=models.CharField(max_length=50)
 	habitos=models.CharField(max_length=150)
 	peso=models.IntegerField()
@@ -69,9 +71,18 @@ class Perro(models.Model):
 	estado_choices=(('A','adoptable'),('AD','adoptado'),)
 	estado=models.CharField(max_length=2,choices=estado_choices,default=adoptable,)
 	propietario=models.ForeignKey(User)
+	
 
 	def __unicode__(self):
 		return self.nombre
 	def get_absolute_url(self):
 		return reverse('perro_detail',kwargs={'pk':self.pk})
 
+class Articulo(models.Model):
+	titulo=models.CharField(max_length=100)
+	contenido=models.TextField(max_length=5000)
+	resumen=models.TextField(max_length=300)
+	def __unicode__(self):
+		return self.titulo
+	def get_absolute_url(self):
+		return reverse('articulo_detail',kwargs={'pk':self.pk})

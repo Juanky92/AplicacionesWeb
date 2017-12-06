@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-align"
+			],
+			[
 				"perro",
 				"perroCreate"
 			],
@@ -48,46 +52,55 @@
 	"buffers":
 	[
 		{
+			"file": "doghouse/dog/forms.py",
+			"settings":
+			{
+				"buffer_size": 796,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "doghouse/dog/models.py",
+			"settings":
+			{
+				"buffer_size": 2730,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "doghouse/dog/views.py",
 			"settings":
 			{
-				"buffer_size": 3673,
+				"buffer_size": 4865,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "doghouse/dog/templates/dog/perro_detail.html",
+			"file": "doghouse/doghouse/settings.py",
 			"settings":
 			{
-				"buffer_size": 668,
+				"buffer_size": 3548,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "doghouse/dog/templates/inicio.html",
+			"file": "doghouse/dog/urls.py",
 			"settings":
 			{
-				"buffer_size": 3097,
+				"buffer_size": 1884,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "doghouse/dog/templates/login.html",
+			"file": "doghouse/dog/templates/dog/perro_form.html",
 			"settings":
 			{
-				"buffer_size": 652,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "doghouse/dog/templates/dog/user_form.html",
-			"settings":
-			{
-				"buffer_size": 241,
+				"buffer_size": 305,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -127,24 +140,40 @@
 	[
 		"/home/juanky/Proyectos Django/Proyecto/doghouse",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog/imagen",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse"
 	],
 	"file_history":
 	[
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_form.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/models.py",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_list.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_list.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/urls.py",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_detail.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_detail.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/login.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/inicio.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/models.py",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/settings.py",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/urls.py",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/views.py",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_form.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/upload.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/articulo_detail.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/articulo_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog/style5.css",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/articulo_form.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/admin.py",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_detail.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/articulos_detail.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/articulos_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/login.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/recetasperro.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/prueba.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/user_form.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/static/dog/style4.css",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_list.html",
+		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_detail.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/urls.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/forms.py",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/user_form.html",
 		"/media/juanky/7204-83B8/IAW_Apps/FlatTask/templates/FlatTask/inquilino_list.html",
 		"/media/juanky/7204-83B8/IAW_Apps/FlatTask/urls.py",
 		"/media/juanky/7204-83B8/IAW_Apps/FlatTask/templates/auth/user_form.html",
@@ -152,9 +181,7 @@
 		"/media/juanky/7204-83B8/IAW_Apps/FlatTask/templates/FlatTask/user_form.html",
 		"/media/juanky/7204-83B8/IAW_Apps/FlatTask/templates/index.html",
 		"/media/juanky/7204-83B8/IAW_Apps/FlatTask/templates/login.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/admin.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_list.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/views.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/login.html",
 		"/home/juanky/Descargas/jacinto/login.html",
 		"/home/juanky/Descargas/jacinto/index.html",
@@ -172,7 +199,6 @@
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/perro_confirm_delete.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/raza_form.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_form.html",
-		"/home/juanky/Proyectos Django/Proyecto/doghouse/doghouse/settings.py",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/propiedade_detail.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/usuario_detail.html",
 		"/home/juanky/Proyectos Django/Proyecto/doghouse/dog/templates/dog/detallep_list.html",
@@ -238,33 +264,34 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "doghouse/dog/views.py",
+					"file": "doghouse/dog/forms.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3673,
+						"buffer_size": 796,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2349,
-								2349
+								796,
+								796
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 561.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -272,26 +299,27 @@
 				},
 				{
 					"buffer": 1,
-					"file": "doghouse/dog/templates/dog/perro_detail.html",
+					"file": "doghouse/dog/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 668,
+						"buffer_size": 2730,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								644,
-								644
+								271,
+								271
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -300,52 +328,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "doghouse/dog/templates/inicio.html",
+					"file": "doghouse/dog/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3097,
+						"buffer_size": 4865,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2089,
-								2089
+								429,
+								429
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 204.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "doghouse/dog/templates/login.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 652,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								391,
-								391
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -355,20 +356,80 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "doghouse/dog/templates/dog/user_form.html",
+					"buffer": 3,
+					"file": "doghouse/doghouse/settings.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 241,
+						"buffer_size": 3548,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								231,
-								231
+								3548,
+								3548
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1783.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "doghouse/dog/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1884,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1635,
+								1635
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "doghouse/dog/templates/dog/perro_form.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
 							]
 						],
 						"settings":
@@ -379,7 +440,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
