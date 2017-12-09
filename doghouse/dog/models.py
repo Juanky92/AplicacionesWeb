@@ -7,7 +7,16 @@ from django.dispatch import receiver
 from django.conf import settings
 import os
 # # Create your models here.
-def path_and_rename(instance, filename):
+def path_and_renames(instance, filename):
+	upload_to = settings.MEDIA_ROOT + "/razas"
+	ext = filename.split('.')[-1]
+	# get filename
+	if instance.pk:
+		filename = '{}.{}'.format(instance.pk, "jpg")
+	# return the whole path to the file
+	return os.path.join(upload_to, filename)
+
+def path_and_renamese(instance, filename):
 	upload_to = settings.MEDIA_ROOT
 	ext = filename.split('.')[-1]
 	# get filename
@@ -16,9 +25,11 @@ def path_and_rename(instance, filename):
 	# return the whole path to the file
 	return os.path.join(upload_to, filename)
 
+
 class Raza(models.Model):
 	raza=models.CharField(max_length=150)
-	descripcion=models.TextField(max_length=5000)
+	descripcion=models.TextField(max_length=5000, null=True)
+	imagen=models.ImageField(upload_to=path_and_renames, null=True)
 	def __unicode__(self):
 		return self.raza
 	def get_absolute_url(self):
@@ -64,7 +75,7 @@ class Perro(models.Model):
 	microchip=models.CharField(max_length=30,unique=True)
 	nombre=models.CharField(max_length=100)
 	edad=models.IntegerField()
-	foto=models.ImageField(upload_to=path_and_rename)
+	foto=models.ImageField(upload_to=path_and_renamese, null=True)
 	caracter=models.CharField(max_length=50)
 	habitos=models.CharField(max_length=150)
 	peso=models.IntegerField()
