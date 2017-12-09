@@ -1,0 +1,7 @@
+body{ background: url(imagen/fondoadopta.jpg) no-repeat bottom right;text-align:center;
+margin:0 auto; }
+p{text-align:center;
+margin:0 auto;}
+img{height: 300px;
+    width: 300px;
+border-radius: 50%;}

@@ -2,7 +2,8 @@
 {% load staticfiles %}
 {%block content%}
 <link rel="stylesheet" type="text/css" href="{% static 'dog/style2.css' %}" />
-    <ul>
+<body>
+<!--     <ul>
         {% for perro in object_list %}
         <li>
         <a href="{{perro.id}}">{{ perro.nombre }}</a></br>
@@ -12,14 +13,14 @@
         </br>
         </li>
         {% endfor %}
-    </ul>
-<!-- <div class="album text-muted">
+    </ul> -->
+<div class="album text-muted">
         <div class="container">
           <div class="row">
           {% for perro in object_list %}
             <div class="card">
             {% load static from staticfiles %}
-              <img src="{% static '/dog/imagen/perrete.jpg' %}">
+              <img src="{% static "dog/imagen/{{request.user.id}}.jpg" %}">
                 <a href="{{perro.id}}">{{ perro.nombre }}</a></br>
               <p class="card-text">Prueba</p>
             {% if perro.propietario.id == user.id %}
@@ -28,6 +29,7 @@
             </div>
               {% endfor %}
         </div>
-</div> -->
+</div>
+</body>
 {% endblock %}
 

@@ -1,10 +1,11 @@
 {%extends 'inicio.html'%}
+{% load staticfiles %}
 {% block content %}
-    <ul>
-        {% for raza in object_list %}
-        <li>
-        <a href="{{raza.id}}">{{ raza.raza }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+{% for raza in object_list %}
+<div class="col-md-4">
+<link rel="stylesheet" type="text/css" href="{% static 'dog/style7.css' %}" />
+	<img src="{% static "dog/imagen/akita.jpg" %}" alt="My image"/>
+	<a href="{{raza.id}}">{{ raza.raza }}</a>
+</div>
+{% endfor %}
 {% endblock %}

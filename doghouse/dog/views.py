@@ -19,7 +19,6 @@ def inicio(request):
 	else:
 		return redirect("Login")
 
-# @method_decorator(login_required,name = 'dispatch' )
 def perroCreate(request):
 	if request.method == 'POST':
 		perro_form = PerroForm(request.POST, request.FILES)
