@@ -1,28 +1,16 @@
 {%extends 'inicio.html'%}
 {% load staticfiles %}
 {%block content%}
-<link rel="stylesheet" type="text/css" href="{% static 'dog/style2.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'dog/style9.css' %}" />
 <body>
-<!--     <ul>
-        {% for perro in object_list %}
-        <li>
-        <a href="{{perro.id}}">{{ perro.nombre }}</a></br>
-        {% if perro.propietario.id == user.id %}
-            <a href="perro_confirm_delete/{{perro.id}}/delete" style="color:black";><input class="btn btn-default" align='center' type="submit" value="Eliminar" style='height:2,5%' text-aling='top'></a>
-        {% endif %}
-        </br>
-        </li>
-        {% endfor %}
-    </ul> -->
 <div class="album text-muted">
         <div class="container">
           <div class="row">
           {% for perro in object_list %}
-            <div class="card">
-            {% load static from staticfiles %}
-              <img src="/static/dog/imagen/{{perro.id}}.jpg">
+            <div class="col-md-3">
+              <img src="/static/dog/imagen/{{perro.id}}.jpg"></br>
                 <a href="{{perro.id}}">{{ perro.nombre }}</a></br>
-              <p class="card-text">Prueba</p>
+              <p class="card-text" style="color:black">{{perro.descripcion}}</p>
             {% if perro.propietario.id == user.id %}
             <a href="perro_confirm_delete/{{perro.id}}/delete" style="color:black";><input class="btn btn-default" align='center' type="submit" value="Eliminar" style='height:2,5%' text-aling='top'></a>
             {% endif %}

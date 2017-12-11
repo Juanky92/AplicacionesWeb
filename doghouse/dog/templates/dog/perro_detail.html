@@ -20,7 +20,11 @@
 <b>Peso:</b>	{{perro.peso}}
 </li>
 <li>
-<b>Vacunas:</b>	{{perro.vacunas}}
+{% if perro.vacunas == True %}
+<b>Vacunas:</b>	Si
+{% else %}
+<b>Vacunas:</b>	No
+{% endif %}
 </li>
 <li>
 <b>Color:</b>	{{perro.color}}
@@ -29,19 +33,32 @@
 <b>Uso:</b>	{{perro.uso}}
 </li>
 <li>
-<b>Altura:</b>	{{perro.altura}}
+{% if perro.altura == "g" %}
+<b>Altura:</b> Grande
+{% else %}
+{% if perro.altura == "m" %}
+<b>Altura:</b> Mediano
+{% else %}
+<b>Altura:</b> Enano
+{% endif %}
+{% endif %}
 </li>
 <li>
 <b>Raza:</b>	{{perro.raza}}
 </li>
 <li>
-<b>Cruce:</b>	{{perro.cruce}}
+{% if perro.cruce == True %}
+<b>Cruce:</b> Si
+{% else %}
+<b>Cruce:</b> No
+{% endif %}
 </li>
 <li>
-<b>Descripcion:</b>	{{perro.descripcion}}
-</li>
-<li>
-<b>Estado:</b>	{{perro.estado}}
+{% if perro.estado == "A" %}
+<b>Estado:</b> Adoptable
+{% else %}
+<b>Estado:</b> Adoptado
+{% endif %}
 </li>
 
 {% endblock %}

@@ -1,8 +1,10 @@
 {%extends 'inicio.html'%}
+{% load staticfiles %}
 {% block content %}
-<ul>
-<li>
-{{raza.descripcion}}<br>
-</li>
-</ul>
+<link rel="stylesheet" type="text/css" href="{% static 'dog/style10.css' %}" />
+<body>
+
+<p align="center">{{raza.descripcion}}</p>
+
+</body>
 {% endblock %}

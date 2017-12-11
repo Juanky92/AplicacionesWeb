@@ -1,9 +1,9 @@
 {%extends 'inicio.html'%}
 {% load staticfiles %}
 {%block content%}
-<link rel="stylesheet" type="text/css" href="{% static 'dog/style4.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'dog/style8.css' %}" />
 <form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
+	<b>{{ form.as_p }}</b>
     <input type="submit" value="Registrar" />
 </form>
 {%endblock%}
